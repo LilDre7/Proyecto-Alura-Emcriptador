@@ -16,6 +16,8 @@
     />
     <link rel="stylesheet" href="/css/styles.css" />
 
+    <script src="https://app.embed.im/snow.js" defer></script>
+
     <!-- Title del proyecto -->
     <title>Lil mi encriptador</title>
   </head>
@@ -44,12 +46,18 @@
               cols="30"
               rows="10"
               placeholder="Ingresa el texto..."
-            ></textarea>
+            ></textarea
+            >
           </div>
-          <span class="info__danger" ><i class='bx bx-info-circle'></i> 
-            Solo minusculas y no tildes 
+          <span class="info__danger"
+            ><i class="bx bx-info-circle"></i>
+            Solo minusculas y no tildes
           </span>
-          <button id="deleteButton" class="button__basura" onclick="deleteText()">
+          <button
+            id="deleteButton"
+            class="button__basura"
+            onclick="deleteText()"
+          >
             <i class="bx bxs-trash trash"></i>
           </button>
         </div>
@@ -63,7 +71,7 @@
             <i class="bx bx-lock close"></i>
             Encriptar
           </button>
-          <button class="button__encriptador" onclick="descencriptar()" >
+          <button class="button__encriptador" onclick="descencriptar()">
             <i class="bx bx-lock-open close"></i>
             Desencriptar
           </button>
@@ -82,9 +90,14 @@
               rows="10"
               placeholder="No se encontro ningun texto..."
             ></textarea>
+            <span id="image" ></span>
           </div>
-          <div class="btn__container" >
-            <button id="btn-close" class="button__encriptador" onclick="copiar()" >
+          <div class="btn__container">
+            <button
+              id="btn-close"
+              class="button__encriptador"
+              onclick="copiar()"
+            >
               <i class="bx bx-copy-alt close"></i>
               Copiar
             </button>

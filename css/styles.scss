@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Titillium+Web:wght@300&family=Work+Sans:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +6,10 @@
 
 body {
   background-color: #f8ed8f;
-  color: rgb(0, 0, 0);
+  background-position: center;
+  background-clip: border-box;
+  color: #0e0e0e;
+  font-family: "Work Sans", sans-serif;
 }
 
 // Section del header
@@ -20,6 +24,7 @@ body {
   margin-bottom: 1rem;
   h1 {
     text-align: center;
+    color: rgb(0, 0, 0);
   }
 }
 
@@ -40,8 +45,9 @@ body {
     font-size: 1rem;
     max-width: 17rem;
     height: 8rem;
-    box-shadow: 7px 7px 5px black;
+    box-shadow: 7px 7px 5px 3px black;
     border: 2px solid black;
+    border-radius: 5px;
   }
   ::placeholder {
     color: rgb(2, 2, 2);
@@ -63,6 +69,10 @@ body {
         display: flex;
         align-items: center;
         gap: 0.3rem;
+      } .info__danger:hover {
+        color: red;
+        font-weight: bold;
+        transition: all;
       }
       .button__basura {
         position: absolute;
@@ -71,10 +81,20 @@ body {
         padding: 0.6rem;
         background-color: transparent;
         box-shadow: 2px 2px 2px 2px black;
+        border-radius: 5px;
         .trash {
           color: red;
           font-size: 1rem;
+        }.trash:hover {
+          transition-duration: 1500ms;
+          transition: all;
+          scale: 1.5;
+          transition-delay: 300ms;
         }
+      }.button__basura:hover{
+        background-color: rgb(255, 255, 255);
+        transition: all;
+        transition-duration: 1s;
       }
     }
     .container__botones {
@@ -93,6 +113,7 @@ body {
         border-bottom: 5px solid rgb(53, 50, 50);
         transform: translate(-0.5rem, -0.5rem);
         transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        border-radius: 5px;
       }
       button:hover {
         cursor: pointer;
@@ -124,6 +145,7 @@ body {
         border-bottom: 5px solid rgb(53, 50, 50);
         transform: translate(-0.5rem, -0.5rem);
         transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+        border-radius: 5px;
       }
       button:hover {
         cursor: pointer;
@@ -132,6 +154,20 @@ body {
           color: blue;
           font-size: 1rem;
         }
+      }
+    }
+    .text__encriptador {
+      position: relative;
+      #image {
+        background-image: url(/assets/images/binoculars.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 110px;
+        width: 150px;
+        position: absolute;
+        left: 25%;
+        bottom: 8%;
       }
     }
   }
@@ -161,6 +197,22 @@ body {
     grid-template-areas: ". .";
     padding: 1rem;
     height: 70vh;
+    .section__desemcriptador {
+      .text__encriptador {
+        position: relative;
+        #image {
+          background-image: url(/assets/images/binoculars.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 110px;
+          width: 180px;
+          position: absolute;
+          left: 25%;
+          bottom: 8%;
+        }
+      }
+    }
   }
 }
 
@@ -182,6 +234,22 @@ body {
       max-width: 300px;
       display: flex;
       justify-content: center;
+    }
+    .section__desemcriptador {
+      .text__encriptador {
+        position: relative;
+        #image {
+          background-image: url(/assets/images/binoculars.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 200px;
+          width: 180px;
+          position: absolute;
+          left: 25%;
+          bottom: 8%;
+        }
+      }
     }
   }
 }

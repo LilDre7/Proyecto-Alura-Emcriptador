@@ -1,5 +1,6 @@
 const texto = document.getElementById("texto");
 texto.focus();
+const imageTxt = document.getElementById("image");
 
 const encriptar = () => {
   const texto = document.getElementById("texto").value;
@@ -24,7 +25,8 @@ const encriptar = () => {
     parrafo.innerHTML = textoCifrado;
     parrafo.style.color = "red";
     parrafo.style.fontSize = "20px";
-    deleteTextEncriptado()
+    deleteTextEncriptado();
+    imageTxt.style.backgroundImage = "none";
   }
 };
 
@@ -34,7 +36,7 @@ const deleteText = () => {
 };
 
 const deleteTextEncriptado = () => {
-  texto.style.color = "white";
+  texto.style.color = "#801ee3";
 };
 
 const limpiar = () => {
@@ -42,7 +44,6 @@ const limpiar = () => {
   texto.focus();
   parrafo.innerHTML = "";
 };
-
 
 const descencriptar = () => {
   const texto = document.getElementById("texto").value;
@@ -58,6 +59,9 @@ const descencriptar = () => {
   if (textoCifrado.length !== 0) {
     textoCifrado = textoCifrado.toLowerCase();
     parrafo.innerHTML = texto;
+  } else {
+    alert("No hay texto para descencriptar");
+    limpiar();
   }
   console.log(texto);
 };
@@ -77,7 +81,12 @@ const copiar = () => {
     .replace(/u/gi, "ufat");
 
   document.execCommand("copy");
-  alert("Texto copiado con éxito " + textoCifrado);
+
+  if (textoCifrado == "") {
+    alert("No hay texto para copiar");
+  } else {
+    alert(`Texto copiado con éxito tu texto cifrado es: ${textoCifrado}`);
+  }
 
   console.log(btnClose);
 };

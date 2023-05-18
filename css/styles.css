@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Titillium+Web:wght@300&family=Work+Sans:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +6,10 @@
 
 body {
   background-color: #f8ed8f;
-  color: rgb(0, 0, 0);
+  background-position: center;
+  background-clip: border-box;
+  color: #0e0e0e;
+  font-family: "Work Sans", sans-serif;
 }
 
 .header__text {
@@ -19,6 +23,7 @@ body {
 }
 .header__text h1 {
   text-align: center;
+  color: rgb(0, 0, 0);
 }
 
 .main__padre__encriptador {
@@ -36,8 +41,9 @@ body {
   font-size: 1rem;
   max-width: 17rem;
   height: 8rem;
-  box-shadow: 7px 7px 5px black;
+  box-shadow: 7px 7px 5px 3px black;
   border: 2px solid black;
+  border-radius: 5px;
 }
 .main__padre__encriptador ::-moz-placeholder {
   color: rgb(2, 2, 2);
@@ -65,6 +71,11 @@ body {
   align-items: center;
   gap: 0.3rem;
 }
+.main__padre__encriptador .section__encriptador .box_encriptador .info__danger:hover {
+  color: red;
+  font-weight: bold;
+  transition: all;
+}
 .main__padre__encriptador .section__encriptador .box_encriptador .button__basura {
   position: absolute;
   top: 0;
@@ -72,10 +83,22 @@ body {
   padding: 0.6rem;
   background-color: transparent;
   box-shadow: 2px 2px 2px 2px black;
+  border-radius: 5px;
 }
 .main__padre__encriptador .section__encriptador .box_encriptador .button__basura .trash {
   color: red;
   font-size: 1rem;
+}
+.main__padre__encriptador .section__encriptador .box_encriptador .button__basura .trash:hover {
+  transition-duration: 1500ms;
+  transition: all;
+  scale: 1.5;
+  transition-delay: 300ms;
+}
+.main__padre__encriptador .section__encriptador .box_encriptador .button__basura:hover {
+  background-color: rgb(255, 255, 255);
+  transition: all;
+  transition-duration: 1s;
 }
 .main__padre__encriptador .section__encriptador .container__botones {
   padding: 0.8rem;
@@ -94,6 +117,7 @@ body {
   border-bottom: 5px solid rgb(53, 50, 50);
   transform: translate(-0.5rem, -0.5rem);
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 5px;
 }
 .main__padre__encriptador .section__encriptador .container__botones button:hover {
   cursor: pointer;
@@ -122,6 +146,7 @@ body {
   border-bottom: 5px solid rgb(53, 50, 50);
   transform: translate(-0.5rem, -0.5rem);
   transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 5px;
 }
 .main__padre__encriptador .section__desemcriptador .btn__container button:hover {
   cursor: pointer;
@@ -130,6 +155,20 @@ body {
 .main__padre__encriptador .section__desemcriptador .btn__container button:hover i {
   color: blue;
   font-size: 1rem;
+}
+.main__padre__encriptador .section__desemcriptador .text__encriptador {
+  position: relative;
+}
+.main__padre__encriptador .section__desemcriptador .text__encriptador #image {
+  background-image: url(/assets/images/binoculars.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 110px;
+  width: 150px;
+  position: absolute;
+  left: 25%;
+  bottom: 8%;
 }
 
 .section__footer {
@@ -155,6 +194,20 @@ body {
     padding: 1rem;
     height: 70vh;
   }
+  .main__padre__encriptador .section__desemcriptador .text__encriptador {
+    position: relative;
+  }
+  .main__padre__encriptador .section__desemcriptador .text__encriptador #image {
+    background-image: url(/assets/images/binoculars.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 110px;
+    width: 180px;
+    position: absolute;
+    left: 25%;
+    bottom: 8%;
+  }
 }
 @media (min-width: 800px) {
   .main__padre__encriptador {
@@ -175,5 +228,19 @@ body {
     max-width: 300px;
     display: flex;
     justify-content: center;
+  }
+  .main__padre__encriptador .section__desemcriptador .text__encriptador {
+    position: relative;
+  }
+  .main__padre__encriptador .section__desemcriptador .text__encriptador #image {
+    background-image: url(/assets/images/binoculars.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 180px;
+    position: absolute;
+    left: 25%;
+    bottom: 8%;
   }
 }/*# sourceMappingURL=styles.css.map */
