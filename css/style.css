@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Titillium+Web:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/assets/images/bg-principal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.header__text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  padding-left: 4rem;
+}
+.header__text .header__name {
+  color: white;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.main__padre__encriptador {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 60%;
+  padding: 1rem 4rem;
+}
+.main__padre__encriptador .section__encriptador {
+  color: aliceblue;
+  width: 70%;
+}
+.main__padre__encriptador .box_encriptador {
+  width: 100%;
+  position: relative;
+}
+.main__padre__encriptador .text__encriptador {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3px;
+}
+.main__padre__encriptador ::placeholder {
+  color: white;
+  font-size: 1.3rem;
+}
+.main__padre__encriptador textarea {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  color: white;
+  resize: none;
+  outline: none;
+  padding: 1rem;
+  border: 1px solid white;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 3px 3px 2px 1px rgba(255, 255, 255, 0.509);
+}
+.main__padre__encriptador .button__basura {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15%;
+  text-align: center;
+  background-color: transparent;
+  padding: 1rem;
+  border: none;
+  border: 1px solid white;
+}
+.main__padre__encriptador .trash {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+}
+.main__padre__encriptador .trash:hover {
+  color: red;
+  transition-duration: 1s;
+}
+.main__padre__encriptador .container__botones {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.main__padre__encriptador button {
+  width: 100%;
+  padding: 0.2rem;
+  background-color: transparent;
+}
+.main__padre__encriptador .close {
+  font: bold;
+  color: white;
+  font-size: 1.4rem;
+}
+.main__padre__encriptador .button__encriptador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  background-color: rgba(62, 59, 59, 0.735);
+  text-transform: capitalize;
+  gap: 10px;
+  border-bottom: 5px solid white;
+  cursor: pointer;
+}
+.main__padre__encriptador :hover {
+  background-color: black;
+  transition: ease;
+  transition-duration: 2000ms;
+}
+.main__padre__encriptador .section__desemcriptador {
+  width: 20%;
+}
+
+.section__footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+}
+.section__footer .article__footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 1.7rem;
+}
+
+/*# sourceMappingURL=style.css.map */

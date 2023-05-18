@@ -1,0 +1,179 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #f8ed8f;
+  color: rgb(0, 0, 0);
+}
+
+.header__text {
+  background-color: rgba(0, 0, 0, 0.134);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.header__text h1 {
+  text-align: center;
+}
+
+.main__padre__encriptador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main__padre__encriptador textarea {
+  background-color: rgb(189, 188, 190);
+  outline: none;
+  resize: none;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-size: 1rem;
+  max-width: 17rem;
+  height: 8rem;
+  box-shadow: 7px 7px 5px black;
+  border: 2px solid black;
+}
+.main__padre__encriptador ::-moz-placeholder {
+  color: rgb(2, 2, 2);
+}
+.main__padre__encriptador ::placeholder {
+  color: rgb(2, 2, 2);
+}
+.main__padre__encriptador .section__encriptador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.main__padre__encriptador .section__encriptador .box_encriptador {
+  position: relative;
+}
+.main__padre__encriptador .section__encriptador .box_encriptador .info__danger {
+  font-size: 1.1rem;
+  position: absolute;
+  transform: translateY(-2.6rem);
+  right: 0;
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.main__padre__encriptador .section__encriptador .box_encriptador .button__basura {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.6rem;
+  background-color: transparent;
+  box-shadow: 2px 2px 2px 2px black;
+}
+.main__padre__encriptador .section__encriptador .box_encriptador .button__basura .trash {
+  color: red;
+  font-size: 1rem;
+}
+.main__padre__encriptador .section__encriptador .container__botones {
+  padding: 0.8rem;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  gap: 1rem;
+}
+.main__padre__encriptador .section__encriptador .container__botones button {
+  margin: 0 auto;
+  padding: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+  box-shadow: 4px 4px 4px black;
+  border: none;
+  border-bottom: 5px solid rgb(53, 50, 50);
+  transform: translate(-0.5rem, -0.5rem);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.main__padre__encriptador .section__encriptador .container__botones button:hover {
+  cursor: pointer;
+  transform: translate(0, 0);
+}
+.main__padre__encriptador .section__encriptador .container__botones button:hover i {
+  color: blue;
+  font-size: 1rem;
+}
+.main__padre__encriptador .section__desemcriptador .box__desmcriptador {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main__padre__encriptador .section__desemcriptador .btn__container {
+  padding: 1rem;
+  padding-top: 2rem;
+}
+.main__padre__encriptador .section__desemcriptador .btn__container button {
+  padding: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+  box-shadow: 4px 4px 4px black;
+  border: none;
+  border-bottom: 5px solid rgb(53, 50, 50);
+  transform: translate(-0.5rem, -0.5rem);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.main__padre__encriptador .section__desemcriptador .btn__container button:hover {
+  cursor: pointer;
+  transform: translate(0, 0);
+}
+.main__padre__encriptador .section__desemcriptador .btn__container button:hover i {
+  color: blue;
+  font-size: 1rem;
+}
+
+.section__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+}
+.section__footer .article__footer {
+  padding: 1rem;
+}
+.section__footer h4 {
+  font-size: 1.1rem;
+}
+
+@media (min-width: 650px) {
+  .main__padre__encriptador {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 20px;
+    grid-template-areas: ". .";
+    padding: 1rem;
+    height: 70vh;
+  }
+}
+@media (min-width: 800px) {
+  .main__padre__encriptador {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 20px;
+    grid-template-areas: ". .";
+    padding: 1rem;
+    height: 70vh;
+  }
+  .main__padre__encriptador textarea {
+    height: 15rem;
+    padding: 2rem;
+    font-size: 1.3rem;
+  }
+  .main__padre__encriptador .container__botones {
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=styles.css.map */

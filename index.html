@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link para el index.html -->
+    <link
+      rel="shortcut icon"
+      href="/assets/images/index.jpg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- Title del proyecto -->
+    <title>Lil mi encriptador</title>
+  </head>
+
+  <body>
+    <!-- Serction del header -->
+    <section>
+      <header class="header__text" id="header">
+        <div class="header__img">
+          <img src="/assets/images/logoalura.svg" alt="" />
+        </div>
+        <h1 class="header__name">Encriptadro Alura Lil Dree</h1>
+      </header>
+    </section>
+
+    <!-- Section principal del encriptador -->
+    <main class="main__padre__encriptador">
+      <!-- En esta parte se colocara el texto para encriptar -->
+      <section class="section__encriptador">
+        <div class="box_encriptador">
+          <div class="text__encriptador">
+            <textarea
+              class="texto"
+              name="texto"
+              id="texto"
+              cols="30"
+              rows="10"
+              placeholder="Ingresa el texto..."
+            ></textarea>
+          </div>
+          <span class="info__danger" ><i class='bx bx-info-circle'></i> 
+            Solo minusculas y no tildes 
+          </span>
+          <button id="deleteButton" class="button__basura" onclick="deleteText()">
+            <i class="bx bxs-trash trash"></i>
+          </button>
+        </div>
+
+        <div class="container__botones">
+          <button
+            class="button__encriptador"
+            type="button"
+            onclick="encriptar()"
+          >
+            <i class="bx bx-lock close"></i>
+            Encriptar
+          </button>
+          <button class="button__encriptador" onclick="descencriptar()" >
+            <i class="bx bx-lock-open close"></i>
+            Desencriptar
+          </button>
+        </div>
+      </section>
+
+      <!-- En esta parte se descriptara el texto -->
+      <section class="section__desemcriptador">
+        <div class="box__desmcriptador">
+          <div class="text__encriptador">
+            <textarea
+              id="parrafo"
+              name="textCopy"
+              class="textCopy"
+              cols="30"
+              rows="10"
+              placeholder="No se encontro ningun texto..."
+            ></textarea>
+          </div>
+          <div class="btn__container" >
+            <button id="btn-close" class="button__encriptador" onclick="copiar()" >
+              <i class="bx bx-copy-alt close"></i>
+              Copiar
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section__footer">
+      <!-- Parte final de mi encriptador -->
+      <article class="article__footer">
+        <h4>
+          <span> © 2023 - </span>
+          Desarrollador por Lil Dree ⊛
+        </h4>
+      </article>
+    </footer>
+
+    <!-- Este el link para vincular nuestro archivo JS -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>
