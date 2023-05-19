@@ -18,25 +18,49 @@ const encriptar = () => {
     texto === texto.toUpperCase() || texto.length === 0;
 
   if (condicionDeMayusculas || texto.match(letras) !== null) {
-    alert("No se admiten mayusculas o tildes");
+    Swal.fire({
+      text: "No se admiten mayusculas o tildes",
+      icon: "error",
+    });
     limpiar();
   } else {
-    alert("Texto cifrado con éxito");
+    Swal.fire({
+      text: "Texto cifrado con éxito",
+      icon: "success",
+    });
     parrafo.innerHTML = textoCifrado;
     parrafo.style.color = "red";
     parrafo.style.fontSize = "20px";
     deleteTextEncriptado();
-    imageTxt.style.backgroundImage = "none";
+    imageTxt.style.opacity = "0";
   }
 };
 
 const deleteText = () => {
-  parrafo.innerHTML = "";
-  texto.value = "";
+  if (texto.value === "") {
+    parrafo.innerHTML = "";
+    texto.focus();
+    imageTxt.style.opacity = "1";
+    imageTxt.style.transition = "all 0.5s";
+    Swal.fire({
+      titleText: "No hay texto para eliminar",
+      icon: "warning"
+    })
+  } else {
+    parrafo.innerHTML = "";
+    texto.value = "";
+    texto.focus();
+    imageTxt.style.opacity = "1";
+    imageTxt.style.transition = "all 0.5s";
+    Swal.fire({
+      titleText: "Texto elimado correctamente",
+      icon: "success"
+    })
+  }
 };
 
 const deleteTextEncriptado = () => {
-  texto.style.color = "#801ee3";
+  texto.style.color = "#000";
 };
 
 const limpiar = () => {
@@ -60,7 +84,10 @@ const descencriptar = () => {
     textoCifrado = textoCifrado.toLowerCase();
     parrafo.innerHTML = texto;
   } else {
-    alert("No hay texto para descencriptar");
+    Swal.fire({
+      text: "No hay texto para descencriptar",
+      icon: "error",
+    });
     limpiar();
   }
   console.log(texto);
@@ -83,9 +110,16 @@ const copiar = () => {
   document.execCommand("copy");
 
   if (textoCifrado == "") {
-    alert("No hay texto para copiar");
+    Swal.fire({
+      text: "No hay texto para copiar",
+      icon: "error",
+    });
   } else {
-    alert(`Texto copiado con éxito tu texto cifrado es: ${textoCifrado}`);
+    Swal.fire({
+      titleText: "Texto copiado con exito",
+      text: `Texto copiado con éxito tu texto cifrado es: ${textoCifrado}`,
+      icon: "success",
+    });
   }
 
   console.log(btnClose);

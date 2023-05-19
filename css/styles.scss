@@ -15,7 +15,6 @@ body {
 // Section del header
 
 .header__text {
-  background-color: rgba(0, 0, 0, 0.134);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +68,8 @@ body {
         display: flex;
         align-items: center;
         gap: 0.3rem;
-      } .info__danger:hover {
+      }
+      .info__danger:hover {
         color: red;
         font-weight: bold;
         transition: all;
@@ -85,30 +85,33 @@ body {
         .trash {
           color: red;
           font-size: 1rem;
-        }.trash:hover {
+        }
+        .trash:hover {
           transition-duration: 1500ms;
           transition: all;
           scale: 1.5;
           transition-delay: 300ms;
         }
-      }.button__basura:hover{
+      }
+      .button__basura:hover {
         background-color: rgb(255, 255, 255);
         transition: all;
         transition-duration: 1s;
       }
     }
     .container__botones {
-      padding: 0.8rem;
       width: 100%;
       display: flex;
       margin: 0 auto;
       gap: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       button {
         margin: 0 auto;
         padding: 0.5rem;
         align-items: center;
         font-size: 1rem;
-        box-shadow: 4px 4px 4px black;
+        box-shadow: 6px 6px 6px black;
         border: none;
         border-bottom: 5px solid rgb(53, 50, 50);
         transform: translate(-0.5rem, -0.5rem);
@@ -160,6 +163,7 @@ body {
       position: relative;
       #image {
         background-image: url(/assets/images/binoculars.png);
+        opacity: 100;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -177,13 +181,43 @@ body {
 .section__footer {
   position: absolute;
   bottom: 0;
-  width: 100vw;
-  text-align: center;
+  width: 100%;
+  background-color: #0e0e0e;
+  border-bottom: 4px solid #f8ed8f;
+  color: white;
   .article__footer {
     padding: 1rem;
-  }
-  h4 {
-    font-size: 1.1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    h4 {
+      font-size: 1.1rem;
+    }
+    .lista {
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      width: 100%;
+      cursor: pointer;
+      align-items: center;
+      padding-top: 0.6rem;
+      li {
+        display: flex;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      i {
+        color: white;
+      }
+      li:hover {
+        color: rgb(184, 36, 233);
+        scale: 1.4;
+        transition: all;
+        transition-duration: 1s;
+      }
+    }
   }
 }
 

@@ -13,7 +13,6 @@ body {
 }
 
 .header__text {
-  background-color: rgba(0, 0, 0, 0.134);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,18 +100,19 @@ body {
   transition-duration: 1s;
 }
 .main__padre__encriptador .section__encriptador .container__botones {
-  padding: 0.8rem;
   width: 100%;
   display: flex;
   margin: 0 auto;
   gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .main__padre__encriptador .section__encriptador .container__botones button {
   margin: 0 auto;
   padding: 0.5rem;
   align-items: center;
   font-size: 1rem;
-  box-shadow: 4px 4px 4px black;
+  box-shadow: 6px 6px 6px black;
   border: none;
   border-bottom: 5px solid rgb(53, 50, 50);
   transform: translate(-0.5rem, -0.5rem);
@@ -161,6 +161,7 @@ body {
 }
 .main__padre__encriptador .section__desemcriptador .text__encriptador #image {
   background-image: url(/assets/images/binoculars.png);
+  opacity: 100;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -174,14 +175,44 @@ body {
 .section__footer {
   position: absolute;
   bottom: 0;
-  width: 100vw;
-  text-align: center;
+  width: 100%;
+  background-color: #0e0e0e;
+  border-bottom: 4px solid #f8ed8f;
+  color: white;
 }
 .section__footer .article__footer {
   padding: 1rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.section__footer h4 {
+.section__footer .article__footer h4 {
   font-size: 1.1rem;
+}
+.section__footer .article__footer .lista {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 100%;
+  cursor: pointer;
+  align-items: center;
+  padding-top: 0.6rem;
+}
+.section__footer .article__footer .lista li {
+  display: flex;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.section__footer .article__footer .lista i {
+  color: white;
+}
+.section__footer .article__footer .lista li:hover {
+  color: rgb(184, 36, 233);
+  scale: 1.4;
+  transition: all;
+  transition-duration: 1s;
 }
 
 @media (min-width: 650px) {
