@@ -209,13 +209,13 @@ body {
         text-align: center;
       }
       i {
-        color: white;
+        color: #ffffff;
       }
-      li:hover {
-        color: rgb(184, 36, 233);
+      i:hover {
+        color: #f8ed8f;
         scale: 1.4;
         transition: all;
-        transition-duration: 1s;
+        transition-duration: 500ms;
       }
     }
   }

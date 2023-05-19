@@ -2,6 +2,7 @@ const texto = document.getElementById("texto");
 texto.focus();
 const imageTxt = document.getElementById("image");
 
+// *************** Este es mi encriptador y su logica ************** //
 const encriptar = () => {
   const texto = document.getElementById("texto").value;
   const parrafo = document.getElementById("parrafo");
@@ -36,6 +37,35 @@ const encriptar = () => {
   }
 };
 
+// *************** Este es el descriptador y su logica *************** //
+const descencriptar = () => {
+  let newtxt = document.getElementById("texto").value;
+  let parrafo = document.getElementById("parrafo");
+
+  newtxt = newtxt
+    .replace(/enter/gi, "g")
+    .replace(/imes/gi, "i")
+    .replace(/ai/gi, "a")
+    .replace(/ober/gi, "o")
+    .replace(/ufat/gi, "u");
+  newtxt
+
+  document.getElementById("texto").value = newtxt;
+
+  if (newtxt.length !== 0) {
+    newtxt = newtxt.toLowerCase();
+    parrafo.innerHTML = newtxt;
+    newtxt.innerHTML = newtxt.value;
+  } else {
+    Swal.fire({
+      text: "No hay texto para descencriptar",
+      icon: "error",
+    });
+    limpiar();
+  }
+};
+
+// ******** Esta es la logica para el boton de la busura de eliminar los textos ****** //
 const deleteText = () => {
   if (texto.value === "") {
     parrafo.innerHTML = "";
@@ -59,40 +89,20 @@ const deleteText = () => {
   }
 };
 
+// ******** Esta es la logica para el cambio de textarea para el cambio de color ****** //
 const deleteTextEncriptado = () => {
   texto.style.color = "#000";
 };
 
+// ***** Esta es para limpiar cuando no quiera el texto ***** //
 const limpiar = () => {
   texto.value = "";
   texto.focus();
   parrafo.innerHTML = "";
 };
 
-const descencriptar = () => {
-  const texto = document.getElementById("texto").value;
-  let parrafo = document.getElementById("parrafo");
 
-  let textoCifrado = texto
-    .replace(/e/gi, "enter")
-    .replace(/i/gi, "imes")
-    .replace(/a/gi, "ai")
-    .replace(/o/gi, "ober")
-    .replace(/u/gi, "ufat");
-
-  if (textoCifrado.length !== 0) {
-    textoCifrado = textoCifrado.toLowerCase();
-    parrafo.innerHTML = texto;
-  } else {
-    Swal.fire({
-      text: "No hay texto para descencriptar",
-      icon: "error",
-    });
-    limpiar();
-  }
-  console.log(texto);
-};
-
+// ***** Este el boton para copiar el texto del resultado del cifrado ***** //
 const copiar = () => {
   const texto = document.getElementById("texto").value;
   const btnClose = document.getElementById("btn-close");

@@ -206,13 +206,13 @@ body {
   text-align: center;
 }
 .section__footer .article__footer .lista i {
-  color: white;
+  color: #ffffff;
 }
-.section__footer .article__footer .lista li:hover {
-  color: rgb(184, 36, 233);
+.section__footer .article__footer .lista i:hover {
+  color: #f8ed8f;
   scale: 1.4;
   transition: all;
-  transition-duration: 1s;
+  transition-duration: 500ms;
 }
 
 @media (min-width: 650px) {
